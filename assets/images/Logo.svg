@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="233" height="56" viewBox="0 0 233 56">
+  <g id="Logo" transform="translate(-24 -54)">
+    <text id="enger" transform="translate(128 96)" fill="#f4a135" font-size="40" font-family="Poppins-Medium, Poppins" font-weight="500"><tspan x="0" y="0">enger</tspan></text>
+    <text id="Me" transform="translate(24 96)" fill="#f4a135" font-size="40" font-family="Poppins-Medium, Poppins" font-weight="500"><tspan x="0" y="0">Me</tspan></text>
+    <text id="s" transform="translate(85 96)" fill="#f4a135" font-size="40" font-family="Poppins-Medium, Poppins" font-weight="500"><tspan x="0" y="0">s</tspan></text>
+    <text id="s-2" data-name="s" transform="matrix(-1, 0, 0, 1, 128, 96)" fill="#f4a135" font-size="40" font-family="Poppins-Medium, Poppins" font-weight="500"><tspan x="0" y="0">s</tspan></text>
+    <circle id="Dot" cx="4" cy="4" r="4" transform="translate(249 92)" fill="#f4a135"/>
+  </g>
+</svg>
