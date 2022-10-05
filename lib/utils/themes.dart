@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-const Color buttonColor = Color(0xFFF15223);
+const Color secondaryColor = Color(0xFFF15223);
 const Color darkBackgroundColor = Color(0xFF404040);
 const Color lightBackgroundColor = Color(0xFFFAFAFA);
 const Color primaryColor = Color(0xFFF4A135);
@@ -29,7 +29,7 @@ class Themes {
     ),
     elevatedButtonTheme: ElevatedButtonThemeData(
       style: ElevatedButton.styleFrom(
-        primary: buttonColor,
+        primary: secondaryColor,
         onPrimary: Colors.white,
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(10.0),
@@ -70,7 +70,7 @@ class Themes {
     ),
     elevatedButtonTheme: ElevatedButtonThemeData(
       style: ElevatedButton.styleFrom(
-          primary: buttonColor,
+          primary: secondaryColor,
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(10.0),
           ),

@@ -56,48 +56,37 @@ class HomeScreen extends StatelessWidget {
         ],
       ),
       bottomNavigationBar: CustomNavigationBar(
-        
+        unSelectedColor: iconColor,
+        selectedColor: secondaryColor,
         items: [
         CustomNavigationBarItem(
           icon: IconButton(
-            icon: Icon(
+            icon: const Icon(
               Icons.message_rounded,
-              color: _homeScreenController.currentBottomBarItemIndex.value == 0
-                  ? primaryColor
-                  : iconColor,
             ),
             onPressed: () {},
           ),
         ),
         CustomNavigationBarItem(
           icon: IconButton(
-            icon: Icon(
+            icon: const Icon(
               Icons.call,
-              color: _homeScreenController.currentBottomBarItemIndex.value == 1
-                  ? primaryColor
-                  : iconColor,
             ),
             onPressed: () {},
           ),
         ),
         CustomNavigationBarItem(
           icon: IconButton(
-            icon: Icon(
+            icon: const Icon(
               Icons.people,
-              color: _homeScreenController.currentBottomBarItemIndex.value == 2
-                  ? primaryColor
-                  : iconColor,
             ),
             onPressed: () {},
           ),
         ),
         CustomNavigationBarItem(
           icon: IconButton(
-            icon: Icon(
+            icon: const Icon(
               Icons.settings,
-              color: _homeScreenController.currentBottomBarItemIndex.value == 3
-                  ? primaryColor
-                  : iconColor,
             ),
             onPressed: () {},
           ),
