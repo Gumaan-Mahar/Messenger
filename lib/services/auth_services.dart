@@ -11,27 +11,28 @@ import '../screens/verify_screen.dart';
 class AuthServices {
   static void verifyPhoneNumber({required String phoneNumber}) async {
     try {
-      EasyLoading.show(status: 'Verifying...'.tr);
+      EasyLoading.show(status: 'Sending Code...'.tr);
       await auth.verifyPhoneNumber(
         phoneNumber: phoneNumber,
         verificationCompleted: (PhoneAuthCredential credential) {
-          // auth.signInWithCredential(credential).then(
-          //   (UserCredential result) {
-          //     EasyLoading.dismiss();
-          //     Get.offAll(
-          //       () => HomeScreen(
-          //         user: result.user,
-          //       ),
-          //     );
-          //   },
-          // ).catchError((e) {
-          //   EasyLoading.dismiss();
-          //   log(e.toString());
-          // });
+          auth.signInWithCredential(credential).then(
+            (UserCredential result) {
+              EasyLoading.dismiss();
+              Get.offAll(
+                () => HomeScreen(
+                  user: result.user,
+                ),
+              );
+            },
+          ).catchError((e) {
+            EasyLoading.dismiss();
+            log(e.toString());
+          });
         },
         verificationFailed: (FirebaseAuthException e) {
           EasyLoading.dismiss();
-          EasyLoading.showError(e.message ?? 'Verification failed.', duration: const Duration(seconds: 8));
+          EasyLoading.showInfo(e.message ?? 'Verification Failed. Try Again.'.tr,
+              duration: const Duration(seconds: 8));
         },
         codeSent: (String verificationId, int? resendToken) {
           EasyLoading.dismiss();

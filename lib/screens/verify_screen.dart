@@ -123,9 +123,48 @@ class _VerifyPhoneNumberState extends State<VerifyPhoneNumber> {
                             child: Text('Resend Code in $timeLeft seconds'),
                           );
                         },
-                        onTap: (startTimer, btnState) {
+                        onTap: (startTimer, btnState) async {
                           if (btnState == ButtonState.Idle) {
                             startTimer(30);
+                            try {
+                              await auth.verifyPhoneNumber(
+                                phoneNumber: widget.phoneNumber,
+                                verificationCompleted:
+                                    (PhoneAuthCredential credential) {
+                                  auth.signInWithCredential(credential).then(
+                                    (UserCredential result) {
+                                      EasyLoading.dismiss();
+                                      Get.offAll(
+                                        () => HomeScreen(
+                                          user: result.user,
+                                        ),
+                                      );
+                                    },
+                                  ).catchError((e) {
+                                    EasyLoading.dismiss();
+                                    log(e.toString());
+                                  });
+                                },
+                                verificationFailed: (FirebaseAuthException e) {
+                                  EasyLoading.showInfo(
+                                      e.message ??
+                                          'Verification Failed. Try Again.'.tr,
+                                      duration: const Duration(seconds: 8));
+                                },
+                                codeSent:
+                                    (String verificationId, int? resendToken) {
+                                  _verifyScreenController.resendToken ==
+                                      resendToken;
+                                },
+                                codeAutoRetrievalTimeout:
+                                    (String verificationId) {},
+                                forceResendingToken:
+                                    _verifyScreenController.resendToken ??
+                                        widget.forceResendingToken,
+                              );
+                            } catch (e) {
+                              log(e.toString());
+                            }
                           }
                         },
                         child: const Text(

@@ -7,6 +7,7 @@ const Color lightBackgroundColor = Color(0xFFFAFAFA);
 const Color primaryColor = Color(0xFFF4A135);
 const Color textFieldFillColorDark = Color(0xFF2C2C2C);
 const Color textFieldFillColorLight = Color(0xFFEEECEC);
+const Color iconColor = Color(0xFF4E4D4F);
 
 class Themes {
   static ThemeData dark = ThemeData.dark().copyWith(
@@ -34,7 +35,9 @@ class Themes {
           borderRadius: BorderRadius.circular(10.0),
         ),
         fixedSize: Size.fromWidth(Get.width * 0.8),
-          padding: EdgeInsets.symmetric(vertical: Get.height * 0.02,),
+        padding: EdgeInsets.symmetric(
+          vertical: Get.height * 0.02,
+        ),
       ),
     ),
     inputDecorationTheme: InputDecorationTheme(
@@ -72,8 +75,9 @@ class Themes {
             borderRadius: BorderRadius.circular(10.0),
           ),
           fixedSize: Size.fromWidth(Get.width * 0.8),
-          padding: EdgeInsets.symmetric(vertical: Get.height * 0.02,)
-          ),
+          padding: EdgeInsets.symmetric(
+            vertical: Get.height * 0.02,
+          )),
     ),
     inputDecorationTheme: InputDecorationTheme(
       filled: true,

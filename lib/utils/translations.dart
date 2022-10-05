@@ -25,13 +25,15 @@ class Messages extends Translations {
           'Phone number is too short':'Phone number is too short',
           'Search':'Search',
           'Start typing to search': 'Start typing to search',
+          'Sending Code...': 'Sending Code...',
+          'Auto Verification Failed. Enter your code.': 'Auto Verification Failed. Enter your code.',
         },
         'ur_PK': {
           'Phone Number': 'فون نمبر',
           'Add phone number to register':
               'اپنا اکاؤنٹ رجسٹر کرنے کے لیے فون نمبر شامل کریں',
           'CONFIRM': 'تصدیق کریں',
-          'Verifying...': 'تصدیق ہو رہی ہے...',
+          'Verifying...': 'تصدیق ہو رہی ہے',
           'Verify Number': 'نمبر کی تصدیق کریں',
           'Enter 6 digits code received on your number':
               'اپنے نمبر پر موصول ہونے والا 6 ہندسوں کا کوڈ درج کریں',
@@ -50,6 +52,8 @@ class Messages extends Translations {
           'Phone number is too short': 'فون نمبر بہت چھوٹا ہے',
           'Search':'تلاش',
           'Start typing to search': 'تلاش کرنے کے لیے ٹائپ کرنا شروع کریں',
+          'Sending Code...': 'کوڈ بھیجا جا رہا ہے',
+          'Verification Failed. Try Again.': 'توثیق ناکام ہو گئی۔ دوبارہ کوشش کریں',
         },
       };
 }

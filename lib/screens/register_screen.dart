@@ -69,7 +69,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                           maxLength: 15,
                           textInputAction: TextInputAction.send,
                           decoration: InputDecoration(
-                            label:  Text('Phone Number'.tr),
+                            label: Text('Phone Number'.tr),
                             fillColor: Colors.transparent,
                             counterText: '',
                             prefix: Padding(
@@ -97,7 +97,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                                         topLeft: Radius.circular(20.0),
                                         topRight: Radius.circular(20.0),
                                       ),
-    
+
                                       inputDecoration: InputDecoration(
                                         labelText: 'Search'.tr,
                                         hintText: 'Start typing to search'.tr,

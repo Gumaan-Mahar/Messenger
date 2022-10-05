@@ -46,6 +46,7 @@ dependencies:
   pin_code_fields: ^7.4.0
   flutter_easyloading: ^3.0.5
   argon_buttons_flutter: ^1.1.0
+  custom_navigation_bar: ^0.8.2
 
 dev_dependencies:
   flutter_test:
